@@ -5,178 +5,152 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>L’Odyssée Heureuse</title>
   <style>
+  /* POLICE */
+  @font-face {
+    font-family: 'Meglona';
+    src: url('polices/Meglona.woff2') format('woff2'),
+         url('polices/Meglona Italic.woff') format('woff'),
+         url('polices/Meglona Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
+  /* GÉNÉRAL */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #b10000;
+    color: white;
+    cursor: url('curseurs/cursor.cur') 16 16, auto;
+  }
 
-body {
-  cursor: none;
-}
+  h1 {
+    text-align: center;
+    font-family: 'Meglona', serif;
+    font-size: 3rem;
+    padding: 50px 0 0 50px;
+    animation: fadeIn 3s ease;
+  }
 
-    @font-face {
-      font-family: 'Meglona';
-      src: url('polices/Meglona.woff2') format('woff2'),
-           url('polices/Meglona Italic.woff') format('woff'),
-           url('polices/Meglona Italic.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-#cursor-line-1, #cursor-line-2 {
-  position: fixed;
-  width: 2px;
-  height: 30px;
-  background: white;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.05s linear;
-}
+  h2 {
+    font-size: 2rem;
+    padding: 50px 0 30px 50px;
+  }
 
-#cursor-line-2 {
-  height: 20px;
-  transform: rotate(90deg);
-}
+  /* INTRODUCTION */
+  .intro {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 30px 50px 0 50px;
+    animation: fadeIn 3s ease;
+  }
 
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background-color: #b10000;
-      color: white;
-      padding: 0;
-      
-    }
+  /* ÉDITION */
+  .edition {
+    border: 3px solid black;
+    padding: 20px;
+    background: white;
+    transition: background 0.3s;
+    margin: 0 50px 50px;
+  }
 
-    h1 {
-      font-family: 'Meglona', serif;
-      font-size: 3rem;
-      margin: 0 0 0 0;
-      animation: fadeIn 3s ease;
-      padding: 50px 0 0 50px;
-    }
+  .edition:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
 
-    h2 {
-      margin: 0 0 0 0;
-      font-size: 2rem;
-      padding: 50px 0 30px 50px;
-    }
+  .edition img {
+    display: block;
+    margin: 0 auto;
+  }
 
+  .edition-button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+  }
 
-    .intro {
-      max-width: 800px;
-      margin: 0 0 0 0;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      animation: fadeIn 3s ease;
-      padding: 30px 0 0 50px;
-    }
+  .edition-button:hover {
+    background-color: white;
+    color: #b10000;
+  }
 
-    .edition {
-      border: 3px solid rgb(0, 0, 0);
-      padding: 20px;
-      background: rgb(255, 255, 255);
-      transition: background 0.3s;
-      margin: 0px 50px 50px 50px
-    }
+  /* ANIMATION */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 
-    .edition:hover {
-      background: rgba(255, 255, 255, 0.1);
-      
-    }
+  /* CONTACT */
+  .contact-section {
+    background-color: black;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-    .edition-button {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      border: 1px solid white;
-      background-color: transparent;
-      color: white;
-      text-decoration: none;
-      font-family: 'Courier New', monospace;
-      font-size: 1rem;
-      transition: background 0.2s, color 0.2s;
-      
-    }
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 400px;
+  }
 
-    .edition-button:hover {
-      background-color: white;
-      color: #b10000;
-      
-    }
+  .contact-left,
+  .contact-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+  .contact-left {
+    padding: 50px;
+    text-align: left;
+  }
 
-    .contact {
-      background-color: black;
-      margin: 50px 0 0 0;
-      padding: 0px 50px 50px 50px;
-      color: white;
+  .contact-left a {
+    color: #fff;
+    text-decoration: underline;
+  }
 
-    }
+  .contact-left h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
 
-    .contact a {
-      color: white;
-      text-decoration: none;
-      border-bottom: 1px solid white;
-      transition: color 0.3s, border-color 0.3s;
-    }
+  .contact-left p,
+  .contact-left ul {
+    margin-left: 50px;
+    padding-left: 0;
+  }
 
-    .contact a:hover {
-      color: #b10000;
-      border-color: #b10000;
-    }
-    .click-animation {
-  transform: scale(1.6) rotate(90deg) !important;
-  background-color: yellow !important;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-.edition img {
-  display: block;
-  margin: 0 auto;
-}
+  .contact-left ul li {
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
 
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
+  .contact-right {
+    overflow: hidden;
+  }
 
-.contact-text {
-  flex: 1 1 300px;
-}
+  .contact-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+  }
+</style>
 
-.contact-image {
-  flex: 1 1 300px;
-  text-align: right;
-}
-
-.contact-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-}
-
-
-  </style>
 </head>
-<!-- Curseur personnalisé -->
-<div id="cursor-line1"></div>
-<div id="cursor-line2"></div>
-
-<script>
-  document.addEventListener("mousemove", (e) => {
-    const line1 = document.getElementById("cursor-line1");
-    const line2 = document.getElementById("cursor-line2");
-
-    const x = e.clientX;
-    const y = e.clientY;
-
-    line1.style.transform = `translate(${x}px, ${y}px) rotate(45deg)`;
-    line2.style.transform = `translate(${x}px, ${y}px) rotate(-45deg)`;
-  });
-</script>
 
 <body>
   <h1>L’Odyssée Heureuse</h1>
@@ -229,53 +203,24 @@ body {
 
   
   <section class="contact-section">
-  <h2>Contact</h2>
   <div class="contact-container">
-    <div class="contact-text">
+    
+    <div class="contact-left">
+      <h2>Contact</h2>
       <p>Pour toute question, collaboration, ou simple échange :</p>
       <ul>
-        <li><strong>Mail :</strong> <a href="mailto:ulysselagarriguedemeillac@gmail.com">ulysselagarriguedemeillac@gmail.com</a></li>
-        <li><strong>Instagram :</strong> <a href="https://www.instagram.com/?hl=fr" target="_blank">@ulysse — sur Instagram</a></li>
+        <li><strong>Mail :</strong> <a href="mailto:odysseeheureuse@gmail.com">odysseeheureuse@gmail.com</a></li>
+        <li><strong>Instagram :</strong> <a href="https://www.instagram.com/_uldm_/" target="_blank">@ulysse — sur Instagram</a></li>
         <li><strong>Patreon :</strong> <a href="https://patreon.com/UlyssedeMeillac" target="_blank">patreon.com/UlyssedeMeillac</a></li>
       </ul>
       <p>Merci pour votre passage. L’Odyssée continue grâce à vous.</p>
     </div>
-    <div class="contact-image">
+
+    <div class="contact-right">
       <img src="imgs/Trans.png" alt="Visuel artistique - L’Odyssée Heureuse" />
     </div>
-</section>
-
-    <script>
-
-  const line1 = document.getElementById("cursor-line-1");
-  const line2 = document.getElementById("cursor-line-2");
-
-  document.addEventListener("mousemove", (e) => {
-    line1.style.left = e.clientX + 5 + "px";
-    line1.style.top = e.clientY + "px";
-    line2.style.left = e.clientX - 10 + "px";
-    line2.style.top = e.clientY + "px";
-  });
-  
-</script>
-<script>
-  const line1 = document.getElementById("cursor-line1");
-  const line2 = document.getElementById("cursor-line2");
-
-  document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("mousedown", () => {
-      line1.classList.add("click-animation");
-      line2.classList.add("click-animation");
-    });
-    link.addEventListener("mouseup", () => {
-      setTimeout(() => {
-        line1.classList.remove("click-animation");
-        line2.classList.remove("click-animation");
-      }, 200); // Durée de l'animation
-    });
-  });
-</script>
 
   </div>
+</section>
 </body>
 </html>
