@@ -232,20 +232,20 @@
 }*/
 
 @media screen and (max-width: 768px) {
+  .edition-wrapper {
+    padding: 30px 0;
+  }
+
   .edition {
     background: transparent;
     border: none;
-    margin: 50px 0;
-    padding: 0;
     text-align: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 0;
+    position: relative;
   }
 
   .edition img {
-    width: 95%;
+    width: 90%;
     height: auto;
     margin: 0 auto;
     display: block;
@@ -256,7 +256,7 @@
   }
 
   .edition h3 {
-    font-size: 1.2rem; /* un peu plus petit */
+    font-size: 1.2rem;
     margin-bottom: 15px;
   }
 
@@ -264,9 +264,16 @@
     display: block;
     margin: 15px auto 0;
     width: 70%;
-    font-size: 0.9rem; /* plus petit */
+    font-size: 0.9rem;
     padding: 8px;
     border: 1px solid white;
+  }
+
+  .divider {
+    width: 60%;
+    height: 1px;
+    background-color: black;
+    margin: 0 auto;
   }
 }
 </style>
@@ -286,7 +293,7 @@
   <h2>Les éditions </h2>
     <div class="edition">
       <h3>L'ODYSSÉE HEUREUSE V</h3>
-      <img src="imgs/OH5.gif" alt="Aperçu animé de l'édition V" style="width:30%; height:auto;">
+      <img src="imgs/OH5.gif" alt="Aperçu animé de l'édition V">
       <p>Édition teintée de réflexions intimes. 34 pages entre vidéos, pièces sonores et poésie. Éclats de soi et prières à dénouer.</p>
       <button class="edition-button" onclick="location.href='https://buy.stripe.com/4gM4gz2rFfXU3HLfEebfO00'">ACQUÉRIR</button>
     </div>
@@ -294,33 +301,31 @@
 
         <div class="edition">
       <h3>L'ODYSSÉE HEUREUSE IV</h3>
-     <img src="imgs/OH4.gif" alt="Aperçu animé de l'édition IV" style="width:30%; height:auto;">
+     <img src="imgs/OH4.gif" alt="Aperçu animé de l'édition IV" >
       <p>40 pages à la rencontre du mouvement. vidéos de faune, vagabondage illégale, lettre intime, collaborations et douce ambiance.</p>
       <button class="edition-button" onclick="location.href='https://buy.stripe.com/00wbJ1eancLI2DH0JkbfO01'">ACQUÉRIR</button>
     </div>
 
     <div class="edition">
       <h3>L'ODYSSÉE HEUREUSE III</h3>
-     <img src="imgs/OH3.gif" alt="Aperçu animé de l'édition III" style="width:30%; height:auto;">
+     <img src="imgs/OH3.gif" alt="Aperçu animé de l'édition III" >
       <p>66 pages de souvenirs et d’enracinement. Poésie de Québec, vidéos, nouvelle insomniaque. Ode à la lenteur et à l'intime.</p>
       <button class="edition-button" onclick="location.href='https://buy.stripe.com/28EcN50jxeTQ3HL2RsbfO02'">ACQUÉRIR</button>
     </div>
 
     <div class="edition">
       <h3>L'ODYSSÉE HEUREUSE II</h3>
-  <img src="imgs/OH2.gif" alt="Aperçu animé de l'édition II" style="width:30%; height:auto;">
+  <img src="imgs/OH2.gif" alt="Aperçu animé de l'édition II" >
       <p>Une édition pour les pleurs, ceux du bonheur et de la perte. 36 pages mêlant court-métrage, poésie et souvenirs familiaux.</p>
       <button class="edition-button" onclick="location.href='https://buy.stripe.com/8x2aEX9U74fcdildw6bfO03'">ACQUÉRIR</button>
     </div>
 
     <div class="edition">
   <h3>L'ODYSSÉE HEUREUSE I</h3>
-  <img src="imgs/OH1.gif" alt="Aperçu animé de l'édition I" style="width:30%; height:auto;">
+  <img src="imgs/OH1.gif" alt="Aperçu animé de l'édition I" >
   <p>La première traversée. 48 pages d’éclosions artistiques : poésie, vidéo, nouvelle, son, photos et dessins. À lire pour soi.</p>
   <button class="edition-button" onclick="location.href='https://buy.stripe.com/aFa6oH0jx6nk2DHdw6bfO04'">ACQUÉRIR</button>
 </div>
-<div id="cursor-line-1"></div>
-<div id="cursor-line-2"></div>
 
   
   <section class="contact-section">
