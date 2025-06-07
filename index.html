@@ -196,6 +196,40 @@
     text-align: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .edition {
+    background: transparent;
+    border: none;
+    margin: 30px 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .edition img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .edition p {
+    display: none;
+  }
+
+  .edition h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .edition-button {
+    display: block;
+    margin: 10px auto 0;
+    width: 80%;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid white;
+  }
+}
 </style>
 
 </head>
@@ -214,7 +248,7 @@
     <div class="edition">
       <h3>L'ODYSSÉE HEUREUSE V</h3>
       <img src="imgs/OH5.gif" alt="Aperçu animé de l'édition V" style="width:30%; height:auto;">
-      <!-- <p>Édition teintée de réflexions intimes. 34 pages entre vidéos, pièces sonores et poésie. Éclats de soi et prières à dénouer.</p>-->
+      <p>Édition teintée de réflexions intimes. 34 pages entre vidéos, pièces sonores et poésie. Éclats de soi et prières à dénouer.</p>
       <button class="edition-button" onclick="location.href='https://buy.stripe.com/4gM4gz2rFfXU3HLfEebfO00'">ACQUÉRIR</button>
     </div>
 
