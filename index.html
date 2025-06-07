@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L’Odyssée Heureuse</title>
+  <style>
+
+
+body {
+  cursor: none;
+}
+
+    @font-face {
+      font-family: 'Meglona';
+      src: url('polices/Meglona.woff2') format('woff2'),
+           url('polices/Meglona Italic.woff') format('woff'),
+           url('polices/Meglona Italic.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+#cursor-line-1, #cursor-line-2 {
+  position: fixed;
+  width: 2px;
+  height: 30px;
+  background: white;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.05s linear;
+}
+
+#cursor-line-2 {
+  height: 20px;
+  transform: rotate(90deg);
+}
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #b10000;
+      color: white;
+      padding: 0;
+      
+    }
+
+    h1 {
+      font-family: 'Meglona', serif;
+      font-size: 3rem;
+      margin: 0 0 0 0;
+      animation: fadeIn 3s ease;
+      padding: 50px 0 0 50px;
+    }
+
+    h2 {
+      margin: 0 0 0 0;
+      font-size: 2rem;
+      padding: 50px 0 30px 50px;
+    }
+
+
+    .intro {
+      max-width: 800px;
+      margin: 0 0 0 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      animation: fadeIn 3s ease;
+      padding: 30px 0 0 50px;
+    }
+
+    .edition {
+      border: 3px solid rgb(0, 0, 0);
+      padding: 20px;
+      background: rgb(255, 255, 255);
+      transition: background 0.3s;
+      margin: 0px 50px 50px 50px
+    }
+
+    .edition:hover {
+      background: rgba(255, 255, 255, 0.1);
+      
+    }
+
+    .edition-button {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid white;
+      background-color: transparent;
+      color: white;
+      text-decoration: none;
+      font-family: 'Courier New', monospace;
+      font-size: 1rem;
+      transition: background 0.2s, color 0.2s;
+      
+    }
+
+    .edition-button:hover {
+      background-color: white;
+      color: #b10000;
+      
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .contact {
+      background-color: black;
+      margin: 50px 0 0 0;
+      padding: 0px 50px 50px 50px;
+      color: white;
+
+    }
+
+    .contact a {
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid white;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .contact a:hover {
+      color: #b10000;
+      border-color: #b10000;
+    }
+    .click-animation {
+  transform: scale(1.6) rotate(90deg) !important;
+  background-color: yellow !important;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.edition img {
+  display: block;
+  margin: 0 auto;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-text {
+  flex: 1 1 300px;
+}
+
+.contact-image {
+  flex: 1 1 300px;
+  text-align: right;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+  </style>
+</head>
+<!-- Curseur personnalisé -->
+<div id="cursor-line1"></div>
+<div id="cursor-line2"></div>
+
+<script>
+  document.addEventListener("mousemove", (e) => {
+    const line1 = document.getElementById("cursor-line1");
+    const line2 = document.getElementById("cursor-line2");
+
+    const x = e.clientX;
+    const y = e.clientY;
+
+    line1.style.transform = `translate(${x}px, ${y}px) rotate(45deg)`;
+    line2.style.transform = `translate(${x}px, ${y}px) rotate(-45deg)`;
+  });
+</script>
+
+<body>
+  <h1>L’Odyssée Heureuse</h1>
+  
+
+  <div class="intro">
+    <p><strong>L’ODYSSÉE HEUREUSE</strong> est un magazine numérique pluridisciplinaire qui met en avant des travaux artistiques déconstruits, poétiques et profonds. Ce magazine est pensé comme un espace libre. Il n’y a pas de parcours imposé ou de règles préétablies, c’est un espace intime ouvert à toustes, qui se veut sensible et éveillé.</p>
+    <p>Fondé par Ulysse de Meillac en 2024, le magazine a pour objectif d’être un lieu de partages et d’échanges créatifs. Il évolue constamment, au fil des rencontres, des questionnements, des besoins. C’est un espace vivant, toujours en transformation, qui s’enrichit numéro après numéro.</p>
+    <p><strong>L’ODYSSÉE HEUREUSE</strong> reconnaît le droit à la terre de tous les peuples autochtones, de Tiohtià:ke à la Palestine, en passant par la Kanaky et Tanindrazana.</p>
+  </div>
+
+  <h2>Les éditions </h2>
+    <div class="edition">
+      <h3>L'ODYSSÉE HEUREUSE V</h3>
+      <img src="imgs/OH5.gif" alt="Aperçu animé de l'édition V" style="width:30%; height:auto;">
+      <p>Édition teintée de réflexions intimes. 34 pages entre vidéos, pièces sonores et poésie. Éclats de soi et prières à dénouer.</p>
+      <button class="edition-button" onclick="location.href='https://buy.stripe.com/test_aFa7sL0jl6jM1f86R37bW04'">ACQUÉRIR</button>
+    </div>
+
+
+        <div class="edition">
+      <h3>L'ODYSSÉE HEUREUSE IV</h3>
+     <img src="imgs/OH4.gif" alt="Aperçu animé de l'édition IV" style="width:30%; height:auto;">
+      <p>40 pages à la rencontre du mouvement. vidéos de faune, vagabondage illégale, lettre intime, collaborations et douce ambiance.</p>
+      <button class="edition-button" onclick="location.href='https://buy.stripe.com/test_14A4gzd677nQbTM6R37bW03'">ACQUÉRIR</button>
+    </div>
+
+    <div class="edition">
+      <h3>L'ODYSSÉE HEUREUSE III</h3>
+     <img src="imgs/OH3.gif" alt="Aperçu animé de l'édition III" style="width:30%; height:auto;">
+      <p>66 pages de souvenirs et d’enracinement. Poésie de Québec, vidéos, nouvelle insomniaque. Ode à la lenteur et à l'intime.</p>
+      <button class="edition-button" onclick="location.href='https://buy.stripe.com/test_4gMbJ1fef5fIaPI7V77bW01'">ACQUÉRIR</button>
+    </div>
+
+    <div class="edition">
+      <h3>L'ODYSSÉE HEUREUSE II</h3>
+  <img src="imgs/OH2.gif" alt="Aperçu animé de l'édition II" style="width:30%; height:auto;">
+      <p>Une édition pour les pleurs, ceux du bonheur et de la perte. 36 pages mêlant court-métrage, poésie et souvenirs familiaux.</p>
+      <button class="edition-button" onclick="location.href='https://buy.stripe.com/test_00w8wP7LN5fI7Dw5MZ7bW02'">ACQUÉRIR</button>
+    </div>
+
+    <div class="edition">
+  <h3>L'ODYSSÉE HEUREUSE I</h3>
+  <img src="imgs/OH1.gif" alt="Aperçu animé de l'édition I" style="width:30%; height:auto;">
+  <p>La première traversée. 48 pages d’éclosions artistiques : poésie, vidéo, nouvelle, son, photos et dessins. À lire pour soi.</p>
+  <button class="edition-button" onclick="location.href='https://buy.stripe.com/test_aFaeVdc236jMbTMdfr7bW00'">ACQUÉRIR</button>
+</div>
+<div id="cursor-line-1"></div>
+<div id="cursor-line-2"></div>
+
+  
+  <section class="contact-section">
+  <h2>Contact</h2>
+  <div class="contact-container">
+    <div class="contact-text">
+      <p>Pour toute question, collaboration, ou simple échange :</p>
+      <ul>
+        <li><strong>Mail :</strong> <a href="mailto:ulysselagarriguedemeillac@gmail.com">ulysselagarriguedemeillac@gmail.com</a></li>
+        <li><strong>Instagram :</strong> <a href="https://www.instagram.com/?hl=fr" target="_blank">@ulysse — sur Instagram</a></li>
+        <li><strong>Patreon :</strong> <a href="https://patreon.com/UlyssedeMeillac" target="_blank">patreon.com/UlyssedeMeillac</a></li>
+      </ul>
+      <p>Merci pour votre passage. L’Odyssée continue grâce à vous.</p>
+    </div>
+    <div class="contact-image">
+      <img src="imgs/Trans.png" alt="Visuel artistique - L’Odyssée Heureuse" />
+    </div>
+</section>
+
+    <script>
+
+  const line1 = document.getElementById("cursor-line-1");
+  const line2 = document.getElementById("cursor-line-2");
+
+  document.addEventListener("mousemove", (e) => {
+    line1.style.left = e.clientX + 5 + "px";
+    line1.style.top = e.clientY + "px";
+    line2.style.left = e.clientX - 10 + "px";
+    line2.style.top = e.clientY + "px";
+  });
+  
+</script>
+<script>
+  const line1 = document.getElementById("cursor-line1");
+  const line2 = document.getElementById("cursor-line2");
+
+  document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("mousedown", () => {
+      line1.classList.add("click-animation");
+      line2.classList.add("click-animation");
+    });
+    link.addEventListener("mouseup", () => {
+      setTimeout(() => {
+        line1.classList.remove("click-animation");
+        line2.classList.remove("click-animation");
+      }, 200); // Durée de l'animation
+    });
+  });
+</script>
+
+  </div>
+</body>
+</html>
