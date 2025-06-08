@@ -22,7 +22,7 @@
     font-family: sans-serif;
     background-color: #b10000;
     color: white;
-    cursor: url('curseurs/corbeau.cur') 16 16, auto;
+    cursor: url('curseurs/cross_classique.cur') 16 16, auto;
   }
 
   h1 {
@@ -40,12 +40,19 @@
 
   /* INTRODUCTION */
   .intro {
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    padding: 30px 50px 0 50px;
-    animation: fadeIn 3s ease;
-  }
+  width: 80%;                /* ou 70%, selon ton goût */
+  margin: 0 auto;            /* centre horizontalement */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 30px 0;
+  animation: fadeIn 3s ease;
+}
+
+.intro p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+  
 
   /* ÉDITION */
   .edition {
@@ -75,9 +82,10 @@
     background-color: transparent;
     color: white;
     text-decoration: none;
-    font-family: 'Courier New', monospace;
+    /*font-family: 'Courier New', monospace;*/
     font-size: 1rem;
     transition: background 0.2s, color 0.2s;
+    font-weight: bold;
   }
 
   .edition-button:hover {
@@ -105,9 +113,17 @@
     min-height: 400px;
   }
 
-  .contact-left {
+ 
+
+
+
+.contact-left {
   flex: 0.8;
-  padding: 50px;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centre verticalement */
+  align-items: center;  /* ou 'center' si tu veux aussi centrer horizontalement */
   text-align: left;
 }
 
@@ -128,15 +144,19 @@
   }
 
   .contact-left p,
-  .contact-left ul {
-    margin-left: 50px;
-    padding-left: 0;
-  }
-
-  .contact-left ul li {
-    margin-left: 50px;
-    margin-bottom: 10px;
-  }
+  .contact-left .justifie {
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 600px;     /* optionnel pour limiter la largeur */
+  margin-left: 10px;    /* cohérent avec les autres <p> */
+}
+.contact-left ul,
+.contact-left ul li {
+  font-size: 1rem;  /* taille légèrement plus grande */
+  line-height: 1.8;   /* pour l’élégance et la lisibilité */
+  margin-left: 10px;
+  padding-left: 0;
+}
 
   .contact-right {
     overflow: hidden;
@@ -253,8 +273,9 @@
 
   <div class="intro">
     <p><strong>L’ODYSSÉE HEUREUSE</strong> est un magazine numérique pluridisciplinaire qui met en avant des travaux artistiques déconstruits, poétiques et profonds. Ce magazine est pensé comme un espace libre. Il n’y a pas de parcours imposé ou de règles préétablies, c’est un espace intime ouvert à toustes, qui se veut sensible et éveillé.</p>
-    <p>Fondé par Ulysse de Meillac en 2024, le magazine a pour objectif d’être un lieu de partages et d’échanges créatifs. Il évolue constamment, au fil des rencontres, des questionnements, des besoins. C’est un espace vivant, toujours en transformation, qui s’enrichit numéro après numéro.</p>
-    <p><strong>L’ODYSSÉE HEUREUSE</strong> reconnaît le droit à la terre de tous les peuples autochtones, de Tiohtià:ke à la Palestine, en passant par la Kanaky et Tanindrazana.</p>
+    <p>Pensé par Ulysse de Meillac en 2024, le magazine a pour objectif d’être un lieu de partages et d’échanges créatifs. Il évolue constamment, au fil des rencontres, des questionnements, des besoins. C’est un espace vivant, toujours en transformation, qui s’enrichit numéro après numéro.</p>
+    <p>Vous vous doutez bien, l’Odyssée réfère directement à mon prénom, mais j’ajoute « Heureuse » car durant ce voyage, dont je ne connais pas la fin, je serai heureux. Heureux d’être avec vous, heureux de montrer qui je suis, heureux de vous savoir complices de mon chemin. Une légitimité enfin acquise m’enjoie de partager ce que je fais, à grande échelle, et d’inviter des gens à faire de même, et à être soutenu pour cela.</p>
+    <p>S’il vous plaît, lisez les textes à voix haute pour qu’ils prennent vie. Faites usage de ce recueil de manière posée. C’est un temps pour vous, que vous accordez à vous-même, pour réfléchir, pour ressentir, pour vous embrasser. Nul besoin de se presser, la vie ne vous dépassera pas, votre vie avance à votre rythme.</p>
   </div>
 
   <h2>Les éditions </h2>
@@ -299,13 +320,13 @@
   <div class="contact-container">
     
     <div class="contact-left">
-      <h2>Contact</h2>
       <p>Pour toute question, collaboration, ou simple échange :</p>
       <ul>
         <li><strong>Mail :</strong> <a href="mailto:odysseeheureuse@gmail.com">odysseeheureuse@gmail.com</a></li>
-        <li><strong>Instagram :</strong> <a href="https://www.instagram.com/_uldm_/" target="_blank">@ulysse — sur Instagram</a></li>
+        <li><strong>Instagram :</strong> <a href="https://www.instagram.com/_uldm_/" target="_blank">_uldm_</a></li>
         <li><strong>Patreon :</strong> <a href="https://patreon.com/UlyssedeMeillac" target="_blank">patreon.com/UlyssedeMeillac</a></li>
       </ul>
+      <p class="justifie"><strong>L’ODYSSÉE HEUREUSE</strong> reconnaît le droit à la terre de tous les peuples autochtones, de Tiohtià:ke à la Palestine, en passant par la Kanaky et Tanindrazana.</p>
       <p>Merci pour votre passage. L’Odyssée continue grâce à vous.</p>
     </div>
 
